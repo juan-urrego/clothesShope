@@ -25,4 +25,9 @@ public class CountryServiceImpl implements CountryService {
                 () -> new ApiRequestException("country not found")
         );
     }
+
+    @Override
+    public Country saveCountry(Country country) {
+        return countryRepository.save(country);
+    }
 }

@@ -6,7 +6,6 @@ import com.udea.clothesstore.enums.CountryCode;
 import com.udea.clothesstore.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -64,4 +63,5 @@ public class ProductController {
         Product product = productService.updateProduct(id, productName, description, prize, percentageDiscount, frontalImage, backImage, code);
         return new ResponseEntity<>(product, HttpStatus.OK);
     }
+
 }
